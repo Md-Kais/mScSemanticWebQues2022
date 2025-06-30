@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Semantic Web Processing Exam</title>
 </head>
+
 <body>
   <p><strong>University of Chittagong</strong></p>
   <p><strong>Department of Computer Science &amp; Engineering</strong></p>
@@ -12,10 +14,12 @@
   <p><strong>Course Title:</strong> Semantic Web Processing</p>
   <p><strong>Full Marks:</strong> 75 &nbsp;&nbsp;&nbsp;<strong>Time:</strong> 04 hours</p>
 
-  <p><strong>[Answer any five of the following. All questions are of equal value. The figures in the right margin indicate full marks. Please write parts of a question serially.]</strong></p>
+  <p><strong>[Answer any five of the following. All questions are of equal value. The figures in the right margin
+      indicate full marks. Please write parts of a question serially.]</strong></p>
 
   <h3>1.</h3>
-  <p>a. Write the advantages and disadvantages of the following two data integration models: model-first load-later and load-first model-later. (4)</p>
+  <p>a. Write the advantages and disadvantages of the following two data integration models: model-first load-later and
+    load-first model-later. (4)</p>
   <p>b. How is Big Data different from Business Intelligence (BI)? (3)</p>
   <p>c. Describe the following V's in real-world use cases: Veracity, Variability, Visibility, Viability. (4)</p>
   <p>d. Sketch a use case to explain descriptive, predictive, and prescriptive analytics. (4)</p>
@@ -29,7 +33,8 @@
   <p>f. What is the function of Semantic HTML? (1)</p>
 
   <h3>3.</h3>
-  <p>a. Explain the shift from database-centric to knowledge base-centric technology, with components and a use case. (4)</p>
+  <p>a. Explain the shift from database-centric to knowledge base-centric technology, with components and a use case.
+    (4)</p>
   <p>b. Write ontology relationships for the following scenarios using OWL/RDFS: (4)</p>
   <ul>
     <li>i. Males and females – specify a relationship and construct.</li>
@@ -44,19 +49,37 @@
   <p><strong>Figure 1: The database schema</strong></p>
   <table border="1">
     <caption><strong>EMP</strong></caption>
-    <tr><th>EMP NO</th><th>ENAME</th><th>JOB</th><th>DEPTNO</th></tr>
-    <tr><td>7369</td><td>SMITH</td><td>CLERK</td><td>10</td></tr>
+    <tr>
+      <th>EMP NO</th>
+      <th>ENAME</th>
+      <th>JOB</th>
+      <th>DEPTNO</th>
+    </tr>
+    <tr>
+      <td>7369</td>
+      <td>SMITH</td>
+      <td>CLERK</td>
+      <td>10</td>
+    </tr>
   </table>
   <br>
   <table border="1">
     <caption><strong>DEPT</strong></caption>
-    <tr><th>DEPTNO</th><th>DNAME</th><th>LOC</th></tr>
-    <tr><td>10</td><td>APPSERVER</td><td>NEW YORK</td></tr>
+    <tr>
+      <th>DEPTNO</th>
+      <th>DNAME</th>
+      <th>LOC</th>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>APPSERVER</td>
+      <td>NEW YORK</td>
+    </tr>
   </table>
 
   <p><strong>Figure 2: RDF version of the database</strong></p>
   <p>[RDF triples describing the same data in semantic web format.]</p>
-<pre>
+  <pre>
 &lt;http://data.example.com/employee/7369&gt; rdf:type ex:Employee.
 &lt;http://data.example.com/employee/7369&gt; ex:name "SMITH".
 &lt;http://data.example.com/employee/7369&gt; ex:department &lt;http://data.example.com/department/10&gt;.
@@ -79,8 +102,10 @@
   <!-- <img src="media/image2.png" alt="RDF Graph 1" width="650" height="397"> -->
   <img src="media/image3.png" alt="RDF Graph" width="498" height="321">
 
-  <p>a. Write an RDF model in Turtle notation from Figure 3, separating terminological triples and asserted facts. (7)</p>
-  <p>b. Represent inferred triples using RDFS entailment regime and justify each. Identify new inferred knowledge. (4)</p>
+  <p>a. Write an RDF model in Turtle notation from Figure 3, separating terminological triples and asserted facts. (7)
+  </p>
+  <p>b. Represent inferred triples using RDFS entailment regime and justify each. Identify new inferred knowledge. (4)
+  </p>
   <p>c. Write a SPARQL query: "Retrieve the number of movies starred by Ellen Page per year". Include prefixes. (4)</p>
 
   <h3>6.</h3>
@@ -89,64 +114,175 @@
     <li>i. List all classes (instances of <code>owl:Class</code>).</li>
     <li>ii. List all properties (<code>owl:DatatypeProperty</code> or <code>owl:ObjectProperty</code>).</li>
     <li>iii. List all triples using <code>populationEstimate</code>.</li>
-    <li>iv. List &lt;SUBJECT, PROPERTY&gt; where <code>CyclingTeam</code> is OBJECT and &lt;PROPERTY, OBJECT&gt; where it's the SUBJECT.</li>
+    <li>iv. List &lt;SUBJECT, PROPERTY&gt; where <code>CyclingTeam</code> is OBJECT and &lt;PROPERTY, OBJECT&gt; where
+      it's the SUBJECT.</li>
     <li>v. Explain query results and group by similarity.</li>
     <li>vi. List names (<code>rdfs:label</code>) of all persons born in Barcelona, ordered ascending.</li>
   </ul>
 
-  <h3>7.</h3>
   <p><strong>Figure 4: Data to be multidimensionally analyzed</strong></p>
   <table border="1">
-  <thead>
-    <tr>
-      <th>ZL</th>
-      <th>UZ</th>
-      <th>UN/WA</th>
-      <th>MZ/MH</th>
-      <th>VIL</th>
-      <th>RMO</th>
-      <th>Administrative Unit - Residence Community</th>
-      <th>Area in Acres</th>
-      <th>Total Households</th>
-      <th>Population Total</th>
-      <th>Population in Households</th>
-      <th>Floating Population</th>
-      <th>Population Density (sq. km)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>15</td><td>37</td><td>29</td><td>253</td><td></td><td>1</td><td>Enayetpur</td><td></td><td>1310</td><td>6781</td><td>6771</td><td>10</td><td></td>
-    </tr>
-    <tr>
-      <td>15</td><td>37</td><td>29</td><td>799</td><td></td><td>1</td><td>Paschim Dhalai</td><td></td><td>5725</td><td>30247</td><td>30247</td><td>0</td><td></td>
-    </tr>
-    <tr>
-      <td>15</td><td>37</td><td>35</td><td></td><td></td><td></td><td><em>Fatehpur Union Total</em></td><td><em>5668</em></td><td><em>7562</em></td><td><em>43929</em></td><td><em>43911</em></td><td><em>18</em></td><td><em>1915</em></td>
-    </tr>
-    <tr>
-      <td>15</td><td>37</td><td>35</td><td>370</td><td></td><td>1</td><td>Jobra</td><td></td><td>1182</td><td>5935</td><td>5935</td><td>0</td><td></td>
-    </tr>
-    <tr>
-      <td>15</td><td>37</td><td>35</td><td>448</td><td></td><td>1</td><td>Jungle Paschim Patty</td><td></td><td>428</td><td>4804</td><td>4804</td><td>0</td><td></td>
-    </tr>
-    <tr>
-      <td>15</td><td>37</td><td>35</td><td>643</td><td></td><td>1</td><td>Maizpatty (Fatehpur)</td><td></td><td>2108</td><td>11697</td><td>11691</td><td>6</td><td></td>
-    </tr>
-    <tr>
-      <td>15</td><td>37</td><td>35</td><td>702</td><td></td><td>1</td><td>Mithachara (Part)</td><td></td><td>585</td><td>3203</td><td>3203</td><td>0</td><td></td>
-    </tr>
-    <tr>
-      <td>15</td><td>37</td><td>35</td><td>721</td><td></td><td>1</td><td>Mithanala</td><td></td><td>291</td><td>1564</td><td>1564</td><td>0</td><td></td>
-    </tr>
-    <tr>
-      <td>15</td><td>37</td><td>35</td><td>838</td><td></td><td>1</td><td>Paschim Patty</td><td></td><td>2968</td><td>16726</td><td>16714</td><td>12</td><td></td>
-    </tr>
-  </tbody>
-</table>
+    <thead>
+      <tr>
+        <th>ZL</th>
+        <th>UZ</th>
+        <th>UN/WA</th>
+        <th>MZ/MH</th>
+        <th>VIL</th>
+        <th>RMO</th>
+        <th>Administrative Unit - Residence Community</th>
+        <th>Area in Acres</th>
+        <th>Total Households</th>
+        <th>Population Total</th>
+        <th>Population in Households</th>
+        <th>Floating Population</th>
+        <th>Population Density (sq. km)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>15</td>
+        <td>37</td>
+        <td>29</td>
+        <td>253</td>
+        <td></td>
+        <td>1</td>
+        <td>Enayetpur</td>
+        <td></td>
+        <td>1310</td>
+        <td>6781</td>
+        <td>6771</td>
+        <td>10</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>37</td>
+        <td>29</td>
+        <td>799</td>
+        <td></td>
+        <td>1</td>
+        <td>Paschim Dhalai</td>
+        <td></td>
+        <td>5725</td>
+        <td>30247</td>
+        <td>30247</td>
+        <td>0</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>37</td>
+        <td>35</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><em>Fatehpur Union Total</em></td>
+        <td><em>5668</em></td>
+        <td><em>7562</em></td>
+        <td><em>43929</em></td>
+        <td><em>43911</em></td>
+        <td><em>18</em></td>
+        <td><em>1915</em></td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>37</td>
+        <td>35</td>
+        <td>370</td>
+        <td></td>
+        <td>1</td>
+        <td>Jobra</td>
+        <td></td>
+        <td>1182</td>
+        <td>5935</td>
+        <td>5935</td>
+        <td>0</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>37</td>
+        <td>35</td>
+        <td>448</td>
+        <td></td>
+        <td>1</td>
+        <td>Jungle Paschim Patty</td>
+        <td></td>
+        <td>428</td>
+        <td>4804</td>
+        <td>4804</td>
+        <td>0</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>37</td>
+        <td>35</td>
+        <td>643</td>
+        <td></td>
+        <td>1</td>
+        <td>Maizpatty (Fatehpur)</td>
+        <td></td>
+        <td>2108</td>
+        <td>11697</td>
+        <td>11691</td>
+        <td>6</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>37</td>
+        <td>35</td>
+        <td>702</td>
+        <td></td>
+        <td>1</td>
+        <td>Mithachara (Part)</td>
+        <td></td>
+        <td>585</td>
+        <td>3203</td>
+        <td>3203</td>
+        <td>0</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>37</td>
+        <td>35</td>
+        <td>721</td>
+        <td></td>
+        <td>1</td>
+        <td>Mithanala</td>
+        <td></td>
+        <td>291</td>
+        <td>1564</td>
+        <td>1564</td>
+        <td>0</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>37</td>
+        <td>35</td>
+        <td>838</td>
+        <td></td>
+        <td>1</td>
+        <td>Paschim Patty</td>
+        <td></td>
+        <td>2968</td>
+        <td>16726</td>
+        <td>16714</td>
+        <td>12</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 
   <!-- <img src="media/image4.png" alt="Multidimensional Data" width="719" height="307"> -->
 
+  <h3>7.</h3>
+  <p><strong>Figure 5: QB4OLAP vocabulary</strong></p>
+  <img src="media/image5.png" alt="QB4OLAP Vocabulary" width="650" height="400">
   <p>a. Based on Figure 5: (15)</p>
   <ul>
     <li>1. Sketch a schematic diagram.</li>
@@ -156,12 +292,14 @@
   </ul>
 
   <h3>8.</h3>
-  <p><strong>Figure 5: QB4OLAP vocabulary</strong></p>
-  <img src="media/image5.png" alt="QB4OLAP Vocabulary" width="650" height="400">
+
 
   <p>a. Comparative analysis of triple stores: JenaTDB, Virtuoso, GraphDB. (3)</p>
   <p>b. What is a property graph? How is it different from an RDF graph? Provide examples. (3)</p>
-  <p>c. For <code>ex:Albert_Einstein</code>, explain completeness metrics: Schema, Property, Population, Interlinking, Currency, Metadata, Labelling. (4)</p>
-  <p>d. Describe a process to build a vocabulary for hotel reviews (textual format). How can a language model help? (5)</p>
+  <p>c. For <code>ex:Albert_Einstein</code>, explain completeness metrics: Schema, Property, Population, Interlinking,
+    Currency, Metadata, Labelling. (4)</p>
+  <p>d. Describe a process to build a vocabulary for hotel reviews (textual format). How can a language model help? (5)
+  </p>
 </body>
+
 </html>
